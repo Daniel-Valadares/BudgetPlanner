@@ -53,39 +53,39 @@ Abaixo podemos ver o Wireframe das paginas da aplicação, cada uma tendo seu pr
 
 **Estatísticas Home:**
 
-![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaHomePage.PNG)
+![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage.PNG)
 
 **Calendário Home:**
 
-![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaHomePage_calander.PNG)
+![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage_calander.PNG)
 
 **Slidebar Home:**
 
-![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaHomePage_slidebar.PNG)
+![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage_slidebar.PNG)
 
 * Profile: nessa pagina o usuário terá acesso ao seus dados cadastrados, juntamente como terá acesso a alguns resumos das estáticas de suas finanças.
 
-![Profile](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaProfile.PNG)
+![Profile](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaProfile.PNG)
 
 * Cadastro de Transações: página para possibilitar o usuário a cadastrar suas transações
 
-![Cadastro de Transações](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaCadastroTrasacoes.PNG)
+![Cadastro de Transações](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaCadastroTrasacoes.PNG)
 
 * Sign In: Essa pagina permita os usuários a acessarem suas contas.
 
-![SignIn](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaSignIn.PNG)
+![SignIn](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaSignIn.PNG)
 
 * Sign Up: Essa pagina permita os usuários a criarem suas contas.
 
 **Sign Up:**
 
-![SignUp](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaSignUp.PNG)
+![SignUp](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaSignUp.PNG)
 
 * Configurações: Essa página permitira os usuários a mudarem algumas configurações do aplicativo.
 
 **Configurações:**
 
-![Config](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\TelaConfig.PNG)
+![Config](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaConfig.PNG)
 
 
 ## Relação de Telas
@@ -93,10 +93,10 @@ Abaixo podemos ver o Wireframe das paginas da aplicação, cada uma tendo seu pr
 Durante o planejamento inicial, foi desenvolvido uma relação de acesso as diferentes telas da aplicação, tendo como objetivo facilitar 
 o acesso aos diversos conteúdos de forma fácil e em poucas interações com a tela. Abaixo, a relação de telas:
 
-![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\RelacaoTelas.jpg)
+![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/RelacaoTelas.jpg)
 
 # Banco de Dados
 
 Durante a definição inicial do projeto, um esboço foi traçado do banco de dados para auxiliar no desenvolvimento, o mesmo esboço se encontra logo abaixo:
 
-![Banco de Dados](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img\BancoDAdos.jpg)
+![Banco de Dados](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/BancoDAdos.jpg)
