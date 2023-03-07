@@ -57,11 +57,11 @@ Abaixo podemos ver o Wireframe das paginas da aplicação, cada uma tendo seu pr
 
 **Calendário Home:**
 
-![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage_calander.PNG)
+![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage_Calander.PNG)
 
 **Slidebar Home:**
 
-![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage_slidebar.PNG)
+![Home Page](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaHomePage_slideBar.PNG)
 
 * Profile: nessa pagina o usuário terá acesso ao seus dados cadastrados, juntamente como terá acesso a alguns resumos das estáticas de suas finanças.
 
@@ -99,4 +99,4 @@ o acesso aos diversos conteúdos de forma fácil e em poucas interações com a 
 
 Durante a definição inicial do projeto, um esboço foi traçado do banco de dados para auxiliar no desenvolvimento, o mesmo esboço se encontra logo abaixo:
 
-![Banco de Dados](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/BancoDAdos.jpg)
+![Banco de Dados](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/BancoDados.jpg)
