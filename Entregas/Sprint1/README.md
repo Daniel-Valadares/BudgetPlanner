@@ -75,9 +75,9 @@ Abaixo podemos ver o Wireframe das páginas da aplicação, cada uma tendo seu p
 
 ![Cadastro de Transações](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaCadastroTrasacoes.PNG)
 
-**Sign In:**
-
 * Sign In: Essa página permite os usuários acessarem suas contas.
+
+**Sign In:**
 
 ![SignIn](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaSignIn.PNG)
 
