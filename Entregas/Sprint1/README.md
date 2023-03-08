@@ -1,6 +1,6 @@
 # Introdução
 
-Esse projeto está sendo desenvolvido sobre o pretexto de introdução a programação mobile, perante a disciplina de Laboratório de Dispositivos Moveis (LDDM), cursada na PUC Minas do Coração Eucarístico.
+Esse projeto está sendo desenvolvido sobre o pretexto de introdução a programação mobile, perante a disciplina de Laboratório de Dispositivos Móveis (LDDM), cursada na PUC Minas do Coração Eucarístico.
 
 # Integrantes da Equipe
 
@@ -14,8 +14,8 @@ Os integrantes do projeto se dão pelos seguintes alunos:
 # Objetivos da Aplicação:
 
 O Budget Planner tem como objetivos ajudar a melhorar o controle da vida financeira
-dos usuários e medida que os possibilita de planejar melhor seus gastos. Por meio da aplicação, visamos gerar estatísticas
-que auxilie nosso publico para atingir uma meta de gastos mais saudável, que contribua para seu desenvolvimento financeiro.
+dos usuários e medida que os possibilita planejar melhor seus gastos. Por meio da aplicação, visamos gerar estatísticas
+que auxilie nosso público para atingir uma meta de gastos mais saudável, que contribua para seu desenvolvimento financeiro.
 
 # Público Alvo:
 
@@ -35,7 +35,7 @@ eficiente para garantir sua segurança financeira na terceira idade.
 
 Para cumprir com tais objetivos, nossa aplicação contará com as seguintes funcionalidades:
 
-* Acompanhamento de gastos: permitir que os usuários registrem e categorizem seus
+* Acompanhamento de gastos: permitir que os usuários registrem e categorizam seus
 gastos de forma fácil e intuitiva.
 * Definição de metas financeiras: permitir que os usuários definam suas metas
 financeiras, como poupar para uma viagem ou para comprar algo específico, e
@@ -47,9 +47,9 @@ base no histórico de transações e perfil financeiro do usuário.
 
 # Telas da Aplicação
 
-Abaixo podemos ver o Wireframe das paginas da aplicação, cada uma tendo seu próprio objetivo, que será citado juntamente com sua imagem.
+Abaixo podemos ver o Wireframe das páginas da aplicação, cada uma tendo seu próprio objetivo, que será citado juntamente com sua imagem.
 
-* Home Page: essa pagina permitira os usuários a transitar entre todo o aplicativo, além de permitir o usuário visualizar estatísticas gerais e acessar um calendário de transações. As três imagens abaixo representam a HomePage do app:
+* Home Page: essa página permitirá os usuários a transitar entre todo o aplicativo, além de permitir que o usuário visualize estatísticas gerais e acesse um calendário de transações. As três imagens abaixo representam a HomePage do app:
 
 **Estatísticas Home:**
 
@@ -65,23 +65,29 @@ Abaixo podemos ver o Wireframe das paginas da aplicação, cada uma tendo seu pr
 
 * Profile: nessa pagina o usuário terá acesso ao seus dados cadastrados, juntamente como terá acesso a alguns resumos das estáticas de suas finanças.
 
+**Profile:**
+
 ![Profile](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaProfile.PNG)
 
 * Cadastro de Transações: página para possibilitar o usuário a cadastrar suas transações
 
+**Cadastro de Transações:**
+
 ![Cadastro de Transações](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaCadastroTrasacoes.PNG)
 
-* Sign In: Essa pagina permita os usuários a acessarem suas contas.
+**Sign In:**
+
+* Sign In: Essa página permite os usuários acessarem suas contas.
 
 ![SignIn](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaSignIn.PNG)
 
-* Sign Up: Essa pagina permita os usuários a criarem suas contas.
+* Sign Up: Essa página permite os usuários criarem suas contas.
 
 **Sign Up:**
 
 ![SignUp](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/TelaSignUp.PNG)
 
-* Configurações: Essa página permitira os usuários a mudarem algumas configurações do aplicativo.
+* Configurações: Essa página permitirá aos usuários mudarem algumas configurações do aplicativo.
 
 **Configurações:**
 
@@ -90,7 +96,7 @@ Abaixo podemos ver o Wireframe das paginas da aplicação, cada uma tendo seu pr
 
 ## Relação de Telas
 
-Durante o planejamento inicial, foi desenvolvido uma relação de acesso as diferentes telas da aplicação, tendo como objetivo facilitar 
+Durante o planejamento inicial, foi desenvolvido uma relação de acesso às diferentes telas da aplicação, tendo como objetivo facilitar 
 o acesso aos diversos conteúdos de forma fácil e em poucas interações com a tela. Abaixo, a relação de telas:
 
 ![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint1/img/RelacaoTelas.jpg)
