@@ -1,4 +1,8 @@
+import 'package:budget_planner/widgets/circular_chart_container.dart';
 import 'package:flutter/material.dart';
+import 'package:budget_planner/widgets/bottom_form.dart';
+
+import '../widgets/bottom_navigation.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,29 +10,23 @@ class Home extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Budget Planner"),
-
+    return Center(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Color(0x44000000),
+          foregroundColor: Colors.white,
+          elevation: 0,
+          title: const Text(
+            "Budget Planner",
+          ),
         ),
+        body: Container(),
+        bottomNavigationBar: BottomNavigationWidget(),
+      ),
     );
   }
 }
 
-/*
-class FirstScreen extends StatelessWidget {
-  @override
-  Widget build (BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Multi Page Application"),
-        ),
-        body: RaisedButton(
-        child: Text('Launch screen'),
-    onPressed: () {
-    // Code for Navigation to the second screen.
-    ),
-    );
-    }
-  }
-*/
+
