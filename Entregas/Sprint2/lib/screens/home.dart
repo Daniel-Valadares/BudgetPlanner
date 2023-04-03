@@ -15,6 +15,7 @@ class Home extends StatelessWidget {
         extendBodyBehindAppBar: true,
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Color(0x44000000),
           foregroundColor: Colors.white,
           elevation: 0,
