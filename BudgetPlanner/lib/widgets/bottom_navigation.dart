@@ -1,4 +1,5 @@
 import 'package:budget_planner/screens/bank_list.dart';
+import 'package:budget_planner/screens/profile_screen.dart';
 import 'package:budget_planner/screens/settings.dart';
 import 'package:budget_planner/widgets/home_widget.dart';
 import 'package:flutter/material.dart';
@@ -17,11 +18,8 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeWidget(),
     BankListWidgets(),
-    Text(
-      'Stats Page',
-      style: optionStyle,
-    ),
-    SettingsPage()
+    Profile(),
+    SettingsPage(),
   ];
 
   void _onItemTapped(int index) {

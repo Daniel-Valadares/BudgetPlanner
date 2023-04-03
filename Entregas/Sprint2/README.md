@@ -94,5 +94,5 @@ Para finalizar as Telas, abaixo podemos ver um Grafo Não-Direcionado mostrando 
 
 # Teste da Aplicação
 
-Para testar a relação de telas, basta acessar a pasta "[Codigo](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/Codigo)", e utilizando o Android Studio, realizar os testes de forma manual. Ou caso prefira, a seguir um vídeo com a relação de telas no [YouTube]().
+Para testar a relação de telas, basta acessar a pasta "[Codigo](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/Codigo)", e utilizando o Android Studio, realizar os testes de forma manual. Ou caso prefira, a seguir um vídeo com a relação de telas no [YouTube](https://youtu.be/Pbe8cZwZMdU).
 

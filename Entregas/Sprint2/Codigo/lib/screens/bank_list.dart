@@ -44,12 +44,22 @@ class BankListWidgets extends StatelessWidget {
                   ),
                 ]),
           ),
-          body: TabBarView(
-              children: [
-                Text("Lista 1"),
-                Text("Lista 2"),
-                Text("Lista 3")
-              ]),
+          body: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xff0052c7), Color(0xff425fff)],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                )),
+            child: Center(
+              child: TabBarView(
+                  children: [
+                    Tab1Widget(),
+                    Tab2Widget(),
+                    Tab3Widget(),
+                  ]),
+            ),
+          ),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.indigoAccent,
             foregroundColor: Colors.white,
@@ -83,7 +93,16 @@ class Tab1Widget extends StatelessWidget {
         child: SingleChildScrollView(
             child: Center(
           child: Column(
-            children: [],
+            children: [
+              ...List.generate(
+                BankCards.length,
+                    (index) {
+                  return Center(
+                    child: BankCards[index],
+                  );
+                },
+              )
+            ],
           ),
         )),
       ),
@@ -102,7 +121,16 @@ class Tab2Widget extends StatelessWidget {
         child: SingleChildScrollView(
             child: Center(
           child: Column(
-            children: [],
+            children: [
+              ...List.generate(
+                CardBankCards.length,
+                    (index) {
+                  return Center(
+                    child: CardBankCards[index],
+                  );
+                },
+              )
+            ],
           ),
         )),
       ),
@@ -121,10 +149,1356 @@ class Tab3Widget extends StatelessWidget {
         child: SingleChildScrollView(
             child: Center(
           child: Column(
-            children: [],
+            children: [
+              ...List.generate(
+                transactionCards.length,
+                    (index) {
+                  return Center(
+                    child: transactionCards[index],
+                  );
+                },
+              )
+            ],
           ),
         )),
       ),
     );
   }
 }
+
+List<Card> BankCards = [
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Banco StackHolder'),
+          subtitle: Text('Número da Conta: XXXXXXXXX'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Edit'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+];
+
+List<Card> CardBankCards = [
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Cartão XXX - Banco StackHolder'),
+          subtitle: Text('Limite: 1700,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text('Editar'),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+
+];
+
+List<Card> transactionCards = [
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+         ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Card(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.album),
+          title: Text('Transação - Realizada em 17/08/2022'),
+          subtitle: Text('Valor: 170,00'),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            TextButton(
+              child: const Text("Editar"),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              child: const Icon(Icons.delete),
+              onPressed: () {/* ... */},
+            ),
+            const SizedBox(width: 8),
+          ],
+        ),
+      ],
+    ),
+  ),
+
+];
+
+
+
