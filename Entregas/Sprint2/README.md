@@ -20,11 +20,11 @@ Nesta Sprint, temos como objetivo entregar o projeto de telas de nossa aplicaç�
 * Tela com cadastro
 * Tela Sobre o App
 
-Com esse pensamento em mente, foi decidido dar a cada entregante do grupo de produzir duas telas, para alcançarmos um número suficiente de acomodar as funcionalidade da aplicação. Sendo a divisão dada pela seguinte abaixo: 
+Com esse pensamento em mente, foi decidido dar a cada entregante do grupo de produzir duas tarefas, para alcançarmos um número suficiente de telas para acomodar as funcionalidade da aplicação, e termos uma forte documentação para apresentar a Sprint. O seguinte Grafo feito no Mermaid js mostra a divisão adotada pelo grupo: 
 
-![Distribuicao](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/img/Distribuicao.png)
+![Divisao](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/img/Divisao.png)
 
-Cumprindo assim a exigência da Tela Inicial e Tela da Principal Funcionalidade, dada pela Tela_Principal delegada a Marcus; da Tela com Cadastro, dada pela Tela_Sing_Up delegada a Felipe; e da Tela Sobre o App, dada pela Tela_About delegada a Caio. Fora as telas obrigatórias, outras telas foram produzidas, e serão melhor abordadas na proxima sessão.
+Cumprindo assim a exigência da Tela Inicial e Tela da Principal Funcionalidade, dada pela Tela Principal delegada a Marcus; da Tela com Cadastro, dada pela Tela_Sing_Up delegada a Felipe; e da Tela Sobre o App, dada pela Tela_About delegada a Caio. Fora as telas obrigatórias, outras telas foram produzidas, e serão melhor abordadas na proxima sessão.
 
 # Telas da Aplicação
 
@@ -90,7 +90,7 @@ Essa página, permite os usuários de criarem suas contas, para usufruir dos rec
 
 Para finalizar as Telas, abaixo podemos ver um Grafo Não-Direcionado mostrando a relação de telas da aplicação.
 
-![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/img/RelacaoTela.jpg)
+![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/img/RelacoesTela.jpg)
 
 # Teste da Aplicação
 
