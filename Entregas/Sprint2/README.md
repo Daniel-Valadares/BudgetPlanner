@@ -90,7 +90,7 @@ Essa página, permite os usuários de criarem suas contas, para usufruir dos rec
 
 Para finalizar as Telas, abaixo podemos ver um Grafo Não-Direcionado mostrando a relação de telas da aplicação.
 
-![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/img/RelacoesTela.jpg)
+![Relação de Telas](https://github.com/Daniel-Valadares/BudgetPlanner/blob/main/Entregas/Sprint2/img/RelacoesTela.png)
 
 # Teste da Aplicação
 
