@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:budget_planner/utilities/constants.dart';
+import 'package:budget_planner/models/user_sql_model.dart';
 
 class signinScreen extends StatefulWidget {
   const signinScreen({super.key});
@@ -10,6 +11,28 @@ class signinScreen extends StatefulWidget {
 }
 
 class _signinScreen extends State<signinScreen> {
+
+  List<Map<String, dynamic>> _journals = [];
+
+  bool _isLoading = true;
+  // This function is used to fetch all data from the database
+  void _refreshJournals() async {
+    final data = await SQLHelper.getItems();
+    setState(() {
+      _journals = data;
+      _isLoading = false;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _refreshJournals(); // Loading the diary when the app starts
+  }
+
+  final TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
 
   Widget _buildEmailTF() {
     return Column(
@@ -25,6 +48,7 @@ class _signinScreen extends State<signinScreen> {
           decoration: kBoxDecorationStyle,
           height: 60.0,
           child: TextField(
+            controller: _emailController,
             keyboardType: TextInputType.emailAddress,
             style: TextStyle(
               color: Colors.white,
@@ -60,6 +84,7 @@ class _signinScreen extends State<signinScreen> {
           decoration: kBoxDecorationStyle,
           height: 60.0,
           child: TextField(
+            controller: _senhaController,
             obscureText: true,
             style: TextStyle(
               color: Colors.white,
@@ -130,7 +155,7 @@ class _signinScreen extends State<signinScreen> {
           decoration: kBoxDecorationStyle,
           height: 60.0,
           child: TextField(
-            obscureText: true,
+            controller: _nomeController,
             style: TextStyle(
               color: Colors.white,
               fontFamily: 'OpenSans',
@@ -151,48 +176,15 @@ class _signinScreen extends State<signinScreen> {
     );
   }
 
-  Widget _buildTel() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Telefone',
-          style: kLabelStyle,
-        ),
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: TextField(
-            obscureText: true,
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'OpenSans',
-            ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.phone,
-                color: Colors.white,
-              ),
-              hintText: 'Digite seu Telefone',
-              hintStyle: kHintTextStyle,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
   Widget _buildLoginBtn() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25.0),
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {
+        onPressed: () async {
+          _addItem();
           Navigator.pushReplacementNamed(context, '/login');
+          //SQLHelper.getItemByEmail(_emailController.text);
         },
         style: ElevatedButton.styleFrom(elevation: 5.0,
             padding: EdgeInsets.all(15.0),
@@ -214,30 +206,30 @@ class _signinScreen extends State<signinScreen> {
     );
   }
 
-  Widget _buildSocialBtn(Function onTap, AssetImage logo) {
-    return GestureDetector(
-      //onTap: onTap,
-      child: Container(
-        height: 60.0,
-        width: 60.0,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white,
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black26,
-              offset: Offset(0, 2),
-              blurRadius: 6.0,
-            ),
-          ],
-          image: DecorationImage(
-            image: logo,
-          ),
-        ),
-      ),
-    );
+  // Insert a new journal to the database
+  Future<void> _addItem() async {
+    await SQLHelper.createItem(
+        _nomeController.text, _emailController.text, _senhaController.text);
+    _refreshJournals();
+    print('trem'+_nomeController.text + _emailController.text + _senhaController.text);
+
   }
 
+  // Update an existing journal
+  Future<void> _updateItem(int id) async {
+    await SQLHelper.updateItem(
+        id, _nomeController.text, _emailController.text, _senhaController.text);
+    _refreshJournals();
+  }
+
+  // Delete an item
+  void _deleteItem(int id) async {
+    await SQLHelper.deleteItem(id);
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+      content: Text('Successfully deleted a journal!'),
+    ));
+    _refreshJournals();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -289,9 +281,6 @@ class _signinScreen extends State<signinScreen> {
 
                       SizedBox(height: 30.0),
                       _buildNameUser(),
-
-                      SizedBox(height: 30.0),
-                      _buildTel(),
 
                       SizedBox(height: 30.0),
                       _buildEmailTF(),

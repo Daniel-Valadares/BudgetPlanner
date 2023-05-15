@@ -17,7 +17,7 @@ class Profile extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.all(10),
           children: [
-            const Column(
+            Column(
               children: [
                 CircleAvatar(
                   radius: 50,

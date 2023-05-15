@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:budget_planner/screens/signin_screen.dart';
 import 'package:budget_planner/utilities/constants.dart';
 import 'package:budget_planner/screens/home.dart';
+import 'package:budget_planner/models//user_sql_model.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -11,6 +12,9 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _rememberMe = false;
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
 
   Widget _buildEmailTF() {
     return Column(
@@ -26,6 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
           decoration: kBoxDecorationStyle,
           height: 60.0,
           child: TextField(
+            controller: _emailController,
             keyboardType: TextInputType.emailAddress,
             style: TextStyle(
               color: Colors.white,
@@ -61,6 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
           decoration: kBoxDecorationStyle,
           height: 60.0,
           child: TextField(
+            controller: _senhaController,
             obscureText: true,
             style: TextStyle(
               color: Colors.white,
@@ -128,8 +134,16 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: EdgeInsets.symmetric(vertical: 25.0),
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, '/home');
+        onPressed: () async {
+          String senha = _senhaController.text;
+          String email = _emailController.text;
+
+          SQLHelper.getItemByEmail(_emailController.text);
+
+          if(await SQLHelper.getItemByEmailBool(_emailController.text, _senhaController.text)){
+            Navigator.pushReplacementNamed(context, '/home');
+          }
+
         },
         style: ElevatedButton.styleFrom(elevation: 5.0,
         padding: EdgeInsets.all(15.0),
