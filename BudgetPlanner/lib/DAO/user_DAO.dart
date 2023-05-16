@@ -1,9 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:sqflite/sqflite.dart' as sql;
+import 'dart:convert';
+import 'package:crypto/crypto.dart';
 
 class SQLHelper {
   static Future<void> createTables(sql.Database database) async {
-    await database.execute("""CREATE TABLE items(
+    await database.execute("""CREATE TABLE users(
         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         nome TEXT,
         email TEXT,
@@ -12,9 +14,9 @@ class SQLHelper {
       )
       """);
   }
-// id: the id of a item
+// id: the id of a user
 // title, description: name and description of your activity
-// created_at: the time that the item was created. It will be automatically handled by SQLite
+// created_at: the time that the user was created. It will be automatically handled by SQLite
 
   static Future<sql.Database> db() async {
     return sql.openDatabase(
@@ -26,12 +28,12 @@ class SQLHelper {
     );
   }
 
-  // Create new item (journal)
-  static Future<int> createItem(String nome, String? email, String? senha) async {
+  // Create new user (journal)
+  static Future<int> createUser(String nome, String? email, String? senha) async {
     final db = await SQLHelper.db();
 
     final data = {'nome': nome, 'email': email, 'senha': senha};
-    final id = await db.insert('items', data,
+    final id = await db.insert('users', data,
         conflictAlgorithm: sql.ConflictAlgorithm.replace);
     return id;
   }
@@ -44,7 +46,7 @@ class SQLHelper {
 
   // Read a single item by id
   // The app doesn't use this method but I put here in case you want to see it
-  static Future<List<Map<String, dynamic>>> getItem(int id) async {
+  static Future<List<Map<String, dynamic>>> getUser(int id) async {
     final db = await SQLHelper.db();
     return db.query('items', where: "id = ?", whereArgs: [id], limit: 1);
   }
