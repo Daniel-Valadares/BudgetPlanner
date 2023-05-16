@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:budget_planner/screens/signin_screen.dart';
 import 'package:budget_planner/utilities/constants.dart';
 import 'package:budget_planner/screens/home.dart';
-import 'package:budget_planner/models//user_sql_model.dart';
+import 'package:budget_planner/DAO/user_DAO.dart';
+import 'package:budget_planner/models/global.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -135,12 +136,19 @@ class _LoginScreenState extends State<LoginScreen> {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () async {
-          String senha = _senhaController.text;
-          String email = _emailController.text;
 
-          SQLHelper.getItemByEmail(_emailController.text);
+          UserDAO.getUserByEmail(_emailController.text);
 
-          if(await SQLHelper.getItemByEmailBool(_emailController.text, _senhaController.text)){
+          if(await UserDAO.getUserByEmailBool(_emailController.text, _senhaController.text)){
+            String nomeG = await UserDAO.getUserByEmailGiveName(_emailController.text);
+            String Aux = await UserDAO.getUserByEmailGiveID(_emailController.text);
+            id = int.parse(Aux);
+            nome = nomeG;
+            email = _emailController.text;
+
+
+            print(nome + email + id.toString());
+
             Navigator.pushReplacementNamed(context, '/home');
           }
 
@@ -294,7 +302,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        'Budget Builder',
+                        'BudgetPlanner',
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'OpenSans',
